@@ -1,153 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AK T-Shirts</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
 background:black;
 color:white;
-overflow-x:hidden;
 }
 
 header{
 text-align:center;
 padding:40px 20px;
-background:linear-gradient(135deg,#000,#1a1a1a,#111);
-animation:bgMove 5s infinite alternate;
-}
-
-@keyframes bgMove{
-0%{background-position:left;}
-100%{background-position:right;}
+background:linear-gradient(to right,#000,#111,#000);
 }
 
 header h1{
-font-size:42px;
+font-size:55px;
 color:gold;
-text-shadow:0 0 15px gold;
-animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-from{opacity:0.7;}
-to{opacity:1;}
+text-shadow:0 0 20px gold;
 }
 
 header p{
+font-size:22px;
 margin-top:10px;
-font-size:18px;
-color:#ddd;
 }
 
-.container{
-width:100%;
-padding:30px 20px;
+.products{
 display:flex;
+flex-wrap:wrap;
 justify-content:center;
 gap:25px;
-padding:20px;
+padding:30px;
 }
 
 .card{
-
+width:300px;
 background:#111;
 border-radius:25px;
 overflow:hidden;
-box-shadow:0 0 30px rgba(255,215,0,0.4);
-transform:translateY(0);
+box-shadow:0 0 25px rgba(255,215,0,0.4);
+text-align:center;
+padding-bottom:20px;
 transition:0.4s;
-animation:float 3s infinite ease-in-out;
-}
-
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0px);}
 }
 
 .card:hover{
-transform:scale(1.03);
-box-shadow:0 0 40px rgba(255,215,0,0.8);
+transform:translateY(-10px) scale(1.03);
 }
 
 .card img{
-width:.card img{
 width:100%;
-height:300px;
+height:320px;
 object-fit:cover;
 display:block;
 }
 
-.card-content{
-padding:20px;
-text-align:center;
-}
-
-.card-content h2{
-font-size:32px;
-margin-bottom:10px;
+.card h2{
+font-size:28px;
+margin-top:15px;
+padding:0 10px;
 }
 
 .price{
-font-size:28px;
+font-size:35px;
 color:gold;
-margin-bottom:20px;
+margin:10px 0;
 font-weight:bold;
 }
 
-.btn{
-display:block;
-width:100%;
-padding:15px;
-margin-top:15px;
-border:none;
-border-radius:14px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-transition:0.3s;
-text-decoration:none;
-}
-
-.whatsapp{
+.order-btn{
+display:inline-block;
+padding:14px 28px;
 background:#25D366;
 color:white;
-box-shadow:0 0 15px #25D366;
+text-decoration:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+margin-top:10px;
+box-shadow:0 0 20px #25D366;
 }
 
-.whatsapp:hover{
-transform:scale(1.05);
-}
-
-.pay{
-background:linear-gradient(90deg,gold,orange);
+.pay-btn{
+display:inline-block;
+padding:14px 28px;
+background:gold;
 color:black;
-box-shadow:0 0 15px gold;
-animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.05);}
-100%{transform:scale(1);}
+text-decoration:none;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+margin-top:15px;
+box-shadow:0 0 20px gold;
 }
 
 footer{
 text-align:center;
 padding:25px;
-margin-top:30px;
 background:#111;
-color:#aaa;
+margin-top:40px;
+font-size:18px;
 }
 
 </style>
@@ -157,72 +120,60 @@ color:#aaa;
 
 <header>
 <h1>AK T-Shirts</h1>
-<p>Premium T‑Shirt Shopping Website</p>
+<p>Premium T-Shirt Shopping Website</p>
 </header>
 
-<div class="container">
+<section class="products">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop" alt="Black Tshirt">
-<div class="card-content">
-<h2>Black Premium T‑Shirt</h2>
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<h2>Black Premium T-Shirt</h2>
 <div class="price">₹499</div>
-<a class="btn whatsapp" href="https://wa.me/918178285265?text=I%20want%20to%20order%20Black%20T-shirt" target="_blank">Order on WhatsApp</a>
-<a class="btn pay" href="https://rzp.io/l/demo" target="_blank">Pay Now</a>
-</div>
+<a class="order-btn" href="https://wa.me/918178285265">Order on WhatsApp</a><br>
+<a class="pay-btn" href="#">Pay Now</a>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1200&auto=format&fit=crop" alt="White Tshirt">
-<div class="card-content">
-<h2>White Premium T‑Shirt</h2>
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
+<h2>White Premium T-Shirt</h2>
 <div class="price">₹499</div>
-<a class="btn whatsapp" href="https://wa.me/918178285265?text=I%20want%20to%20order%20White%20T-shirt" target="_blank">Order on WhatsApp</a>
-<a class="btn pay" href="https://rzp.io/l/demo" target="_blank">Pay Now</a>
-</div>
+<a class="order-btn" href="https://wa.me/918178285265">Order on WhatsApp</a><br>
+<a class="pay-btn" href="#">Pay Now</a>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop" alt="Mustard Tshirt">
-<div class="card-content">
-<h2>Mustard Premium T‑Shirt</h2>
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
+<h2>Mustard Premium T-Shirt</h2>
 <div class="price">₹499</div>
-<a class="btn whatsapp" href="https://wa.me/918178285265?text=I%20want%20to%20order%20Mustard%20T-shirt" target="_blank">Order on WhatsApp</a>
-<a class="btn pay" href="https://rzp.io/l/demo" target="_blank">Pay Now</a>
-</div>
+<a class="order-btn" href="https://wa.me/918178285265">Order on WhatsApp</a><br>
+<a class="pay-btn" href="#">Pay Now</a>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop" alt="Grey Tshirt">
-<div class="card-content">
-<h2>Grey Premium T‑Shirt</h2>
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c">
+<h2>Grey Premium T-Shirt</h2>
 <div class="price">₹499</div>
-<a class="btn whatsapp" href="https://wa.me/918178285265?text=I%20want%20to%20order%20Grey%20T-shirt" target="_blank">Order on WhatsApp</a>
-<a class="btn pay" href="https://rzp.io/l/demo" target="_blank">Pay Now</a>
-</div>
+<a class="order-btn" href="https://wa.me/918178285265">Order on WhatsApp</a><br>
+<a class="pay-btn" href="#">Pay Now</a>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop" alt="Olive Green Tshirt">
-<div class="card-content">
-<h2>Olive Green T‑Shirt</h2>
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f">
+<h2>Olive Green T-Shirt</h2>
 <div class="price">₹499</div>
-<a class="btn whatsapp" href="https://wa.me/918178285265?text=I%20want%20to%20order%20Olive%20Green%20T-shirt" target="_blank">Order on WhatsApp</a>
-<a class="btn pay" href="https://rzp.io/l/demo" target="_blank">Pay Now</a>
-</div>
+<a class="order-btn" href="https://wa.me/918178285265">Order on WhatsApp</a><br>
+<a class="pay-btn" href="#">Pay Now</a>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop" alt="Green Tshirt">
-<div class="card-content">
-<h2>Green Premium T‑Shirt</h2>
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
+<h2>Green Premium T-Shirt</h2>
 <div class="price">₹499</div>
-<a class="btn whatsapp" href="https://wa.me/918178285265?text=I%20want%20to%20order%20Green%20T-shirt" target="_blank">Order on WhatsApp</a>
-<a class="btn pay" href="https://rzp.io/l/demo" target="_blank">Pay Now</a>
-</div>
+<a class="order-btn" href="https://wa.me/918178285265">Order on WhatsApp</a><br>
+<a class="pay-btn" href="#">Pay Now</a>
 </div>
 
-</div>
+</section>
 
 <footer>
 © 2026 AK T-Shirts | All Rights Reserved
